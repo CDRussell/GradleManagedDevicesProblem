@@ -30,6 +30,19 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    testOptions {
+        devices {
+            pixel2api29(com.android.build.api.dsl.ManagedVirtualDevice) {
+                // Use device profiles you typically see in Android Studio
+                device = "Pixel 2"
+                apiLevel = 29
+                // You can also specify "aosp" if you don’t require Google Play Services.
+                systemImageSource = "google"
+                abi = "x86"
+            }
+        }
+    }
 }
 
 dependencies {
