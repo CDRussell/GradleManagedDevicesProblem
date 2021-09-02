@@ -24,8 +24,5 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Managed device setup
-        run: ./gradlew -Pandroid.experimental.androidTest.useUnifiedTestPlatform=true :app:pixel2api29Setup --debug
-
       - name: Test Command
         run: ./gradlew -Pandroid.experimental.androidTest.useUnifiedTestPlatform=true :app:pixel2api29DebugAndroidTest
